@@ -4,12 +4,14 @@
   "description": "\"# flashcards\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "CreateFlashcardBuilderApp": "ng new flashcard-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@angular/cli": "^21.0.2"
-  }
+  },
+  "devDependencies": {}
 }
