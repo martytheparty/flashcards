@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-ilm": "ng build -c ilikeemail",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --coverage"
   },

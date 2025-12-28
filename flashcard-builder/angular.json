@@ -49,6 +49,10 @@
               ],
               "outputHashing": "all"
             },
+            "ilikeemail": {
+              "baseHref": "/flashcards/",
+              "deployUrl": "/flashcards/"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
