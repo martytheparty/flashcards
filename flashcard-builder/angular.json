@@ -53,6 +53,11 @@
               "baseHref": "/flashcards/",
               "deployUrl": "/flashcards/"
             },
+              "github": {
+              "baseHref": "/flashcards/",
+              "optimization": true,
+              "outputHashing": "all"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,

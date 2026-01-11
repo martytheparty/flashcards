@@ -6,8 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "build-ilm": "ng build -c ilikeemail",
+    "build-github": "ng build -c github",
+    "deploy-github": "ng build -c github && npx angular-cli-ghpages --dir=dist/flashcard-builder/browser --branch=gh-pages",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --coverage"
+    "test": "ng test --watch=false --coverage",
+    "gh-cli": "npm install -D angular-cli-ghpages"
   },
   "prettier": {
     "printWidth": 100,
@@ -38,6 +41,7 @@
     "@angular/cli": "^21.0.2",
     "@angular/compiler-cli": "^21.0.0",
     "@vitest/coverage-v8": "^4.0.15",
+    "angular-cli-ghpages": "^3.0.2",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
