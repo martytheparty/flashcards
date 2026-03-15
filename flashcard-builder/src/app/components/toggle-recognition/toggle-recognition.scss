@@ -1,0 +1,34 @@
+.voice-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status {
+  min-width: 150px;
+}
+
+.status-icons {
+
+    display: block;
+    width: 20px;
+    margin: 0 0 0 20px;
+
+    mat-icon {
+        position: relative;
+        top: 4px;
+    }
+
+    .status-waiting {
+        color: #ffb300; /* amber */
+    }
+
+    .status-on {
+        color: #4caf50; /* green */
+    }
+
+    .status-warn {
+        color: #F44336; /* red */
+    }
+}
+
