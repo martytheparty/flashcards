@@ -9,9 +9,14 @@
     "build-github": "ng build -c github",
     "deploy-github": "ng build -c github && npx angular-cli-ghpages --dir=dist/flashcard-builder/browser --branch=gh-pages",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --coverage",
     "gh-cli": "npm install -D angular-cli-ghpages",
-    "ngmaterial": "ng add @angular/material"
+    "ngmaterial": "ng add @angular/material",
+    "vrService": "ng g s services/voiceRecognition.service",
+    "trComponent": "ng g c components/toggleRecognition",
+    "pwInstall": "npm install -D @vitest/browser-playwright playwright",
+    "vsInterfaces": "ng g i interfaces/voiceRecognition.interfaces",
+    "vsEnums": "ng g i enums/voiceRecognition.enums",
+    "resultsComponent": "ng g c components/results"
   },
   "prettier": {
     "printWidth": 100,

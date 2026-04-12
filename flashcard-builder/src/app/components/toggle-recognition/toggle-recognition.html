@@ -1,0 +1,27 @@
+Microphone 
+
+<div class="voice-control">
+
+  <span class="status-icons">
+    @if(voiceState === "off") {
+      <mat-icon data-cypress-id="microphone-warn" class="status-warn">block</mat-icon>
+    }
+
+    @if(voiceState === "waiting") {
+      <mat-icon data-cypress-id="microphone-wait" class="status-waiting">schedule</mat-icon>
+    }
+
+    @if(voiceState === "on") {
+      <mat-icon  data-cypress-id="microphone-on" class="status-on">check_circle</mat-icon>
+    }
+  </span>
+
+  <mat-slide-toggle
+    [checked]="voiceState !== 'off'"
+    (change)="onToggleChange($event.checked)"
+    data-cypress-id="microphone-toggle"
+  >
+  </mat-slide-toggle>
+
+
+</div>

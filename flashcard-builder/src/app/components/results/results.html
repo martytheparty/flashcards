@@ -1,0 +1,21 @@
+<table style="margin: 5px;">
+    @if(voiceRecognitionService.voiceRecognitionTranscriptsSignal().length > 0) {
+    <tr>
+        <td>
+            <strong>Current MSG</strong>
+        </td>
+        <td>
+            <span data-cy="current-msg">{{ voiceRecognitionService.voiceRecognitionResultSignal() }}</span>
+        </td>
+    </tr>
+    }
+    @for(transcript of voiceRecognitionService.voiceRecognitionTranscriptsSignal(); track $index) {
+    <tr data-cy="msgs">
+        <td>{{$index}}</td>
+        <td>{{transcript}}</td>
+    </tr>
+    }
+</table>
+
+
+
