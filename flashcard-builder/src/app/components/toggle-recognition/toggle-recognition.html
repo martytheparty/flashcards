@@ -19,6 +19,7 @@ Microphone
   <mat-slide-toggle
     [checked]="voiceState !== 'off'"
     (change)="onToggleChange($event.checked)"
+    data-cypress-id="microphone-toggle"
   >
   </mat-slide-toggle>
 

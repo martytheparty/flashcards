@@ -12,7 +12,10 @@ export class VoiceRecognitionService {
   recognitionOn = false;
 
   voiceRecognitionStateSignal: WritableSignal<VoiceStateEnum> = signal<VoiceStateEnum>(VoiceStateEnum.Off);
-  voiceRecognitionResultSignal: WritableSignal<any[]> = signal<any[]>([]);
+  voiceRecognitionResultSignal: WritableSignal<string> = signal<string>('');
+
+  voiceRecognitionTranscriptsSignal: WritableSignal<string[]> = signal<string[]>([]);
+
   constructor() {
 
     if ('SpeechRecongition' in window) {
@@ -40,11 +43,24 @@ export class VoiceRecognitionService {
 
     this.recognition.onresult = (event: any) => {
         // event.results contains the recognized phrases
-        const transcript = 
-        Array.from(event.results) as any[];
+        // const transcript = 
+        // Array.from(event.results) as any[];
 
-        this.voiceRecognitionResultSignal.set(transcript);
-        console.log('Recognized text:', transcript);
+      const resultsArray = Array.from(event.results);
+
+
+      let lastResult = "";
+
+      if (resultsArray?.length  > 0) {
+        const srResult: any[] = resultsArray[resultsArray.length - 1] as any[];
+        lastResult = srResult[0].transcript;
+      }
+
+      const transcripts = Array.from(event.results)
+      .map((result: any) => result[0].transcript);
+
+        this.voiceRecognitionResultSignal.set(lastResult);
+        this.voiceRecognitionTranscriptsSignal.set(transcripts);
     };
 
 

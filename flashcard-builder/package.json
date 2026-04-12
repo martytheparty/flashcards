@@ -15,7 +15,8 @@
     "trComponent": "ng g c components/toggleRecognition",
     "pwInstall": "npm install -D @vitest/browser-playwright playwright",
     "vsInterfaces": "ng g i interfaces/voiceRecognition.interfaces",
-    "vsEnums": "ng g i enums/voiceRecognition.enums"
+    "vsEnums": "ng g i enums/voiceRecognition.enums",
+    "resultsComponent": "ng g c components/results"
   },
   "prettier": {
     "printWidth": 100,
